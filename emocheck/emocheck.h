@@ -1,6 +1,6 @@
 /*
  * LICENSE
- * Please reffer to the LICENSE.txt in the https://github.com/JPCERTCC/EmoCheck/
+ * Please refer to the LICENSE.txt at https://github.com/JPCERTCC/EmoCheck/
  */
 
 #ifndef EMOCHECK_EMOCHECK_H_
@@ -8,6 +8,8 @@
 
 // standard module
 #include <vector>
+#include <tuple>
+#include <string>
 
 namespace emocheck {
 
@@ -26,7 +28,7 @@ struct EmotetProcess {
 };
 
 std::string WideCharToString(wchar_t *wide_char);
-std::vector<EmotetProcess> ScanEmotet(bool);
+std::tuple<int,std::vector<EmotetProcess>> ScanEmotet(bool);
 
 }  //namespace emocheck
 
